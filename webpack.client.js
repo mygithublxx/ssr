@@ -2,6 +2,7 @@ const path = require("path");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const { merge } = require("webpack-merge")
 const webpackBase =require('./webpack.base')
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const webpackClient = {
   entry: "./src/client",
@@ -13,7 +14,16 @@ const webpackClient = {
     new CleanWebpackPlugin({
       cleanOnceBeforeBuildPatterns: ["**/*", "!favicon.ico"],
     }),
+    new MiniCssExtractPlugin({
+      filename:"css/bundle.[hash:5].css"
+    }),
   ],
+  module: {
+    rules: [{
+      test:/\.css$/i,
+      use:[MiniCssExtractPlugin.loader, "css-loader"]
+    }]
+  }
 };
 
 module.exports = merge(webpackBase, webpackClient)
