@@ -1,15 +1,18 @@
-const  path = require("path");
-const WebpackNodeExternals = require("webpack-node-externals")
-const { merge } = require("webpack-merge")
-const webpackBase =require('./webpack.base')
-
-const webpackServer = {
-  target: "node",
+const path = require("path");
+const baseConfig = require("./webpack.base");
+const merge = require("webpack-merge");
+const serverConfig = {
+  devtool: "none",
   entry: "./src/server",
+  target: "node",
   output: {
     filename: "server.js",
+    path: path.resolve(__dirname, "./dist")
   },
-  externals: [WebpackNodeExternals()],
+  module: {
+    rules: [{ test: /\.css$/, use: ["isomorphic-style-loader", "css-loader?modules"] }]
+  }
 };
 
-module.exports = merge(webpackBase, webpackServer)
+module.exports = merge(baseConfig, serverConfig);
+

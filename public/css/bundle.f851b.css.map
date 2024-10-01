@@ -1,1 +1,0 @@
-{"version":3,"file":"css/bundle.f851b.css","mappings":";;;AAAA;IACI,kBAAkB;IAClB,iBAAiB;AACrB,C","sources":["webpack://ssr/./src/assets/global.css"],"sourcesContent":["body {\n    padding-left: 50px;\n    padding-top: 50px;\n}"],"names":[],"sourceRoot":""}
