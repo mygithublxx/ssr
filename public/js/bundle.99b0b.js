@@ -77,7 +77,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
+/******/ 	__webpack_require__.p = "/";
 /******/
 /******/
 /******/ 	// Load entry module and return exports
@@ -28614,6 +28614,19 @@ if (false) {} else {
 
 /***/ }),
 
+/***/ "./src/assets/chengge.png":
+/*!********************************!*\
+  !*** ./src/assets/chengge.png ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "images/chengge.308a3.png");
+
+/***/ }),
+
 /***/ "./src/assets/global.css":
 /*!*******************************!*\
   !*** ./src/assets/global.css ***!
@@ -28677,7 +28690,7 @@ react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.hydrate(/*#__PURE__*/react__WEB
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"beautybutton":"YMLqj2XOArWp0hz6uki-f"};
+module.exports = {"beautybutton":"YMLqj2XOArWp0hz6uki-f","bgc":"_3tdh-hnHmXOri_ev4kvWmt"};
 
 /***/ }),
 
@@ -28694,19 +28707,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index.css */ "./src/pages/Home/index.css");
 /* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_index_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _assets_chengge_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../assets/chengge.png */ "./src/assets/chengge.png");
+
 
 
 /* harmony default export */ __webpack_exports__["default"] = (function () {
   const [number, setNumber] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(0);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "\u9996\u9875 : ", number), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "\u9996\u9875 : ", number), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: _assets_chengge_png__WEBPACK_IMPORTED_MODULE_2__["default"]
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: _index_css__WEBPACK_IMPORTED_MODULE_1___default.a.bgc
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     className: _index_css__WEBPACK_IMPORTED_MODULE_1___default.a.beautybutton,
     onClick: () => {
       setNumber(number + 1);
     }
-  }, "\u70B9\u51FB"));
+  }, "\u70B9\u51FB")));
 });
 
 /***/ })
 
 /******/ });
-//# sourceMappingURL=bundle.21f28.js.map
+//# sourceMappingURL=bundle.99b0b.js.map

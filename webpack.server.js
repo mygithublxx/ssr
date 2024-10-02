@@ -7,12 +7,27 @@ const serverConfig = {
   target: "node",
   output: {
     filename: "server.js",
-    path: path.resolve(__dirname, "./dist")
+    path: path.resolve(__dirname, "./dist"),
+    publicPath:"/"
   },
   module: {
-    rules: [{ test: /\.css$/, use: ["isomorphic-style-loader", "css-loader?modules"] }]
-  }
+    rules: [
+      {
+        test: /\.css$/,
+        use: ["isomorphic-style-loader", "css-loader?modules"],
+      },
+      {
+        test: /\.(png)|(jpg)|(gif)$/,
+        use: [{
+          loader:"file-loader",
+          options:{
+            name: 'images/[name].[hash:5].[ext]',
+            emitFile: false
+          }
+        }],
+      },
+    ],
+  },
 };
 
 module.exports = merge(baseConfig, serverConfig);
-
